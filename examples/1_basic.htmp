@@ -1,0 +1,18 @@
+<head>
+    <title>Picotron Website</title>
+</head>
+<body>
+    <div class="container">
+        <h id="welcome-text">Welcome to our Website</h>
+        <p>Wassup</p>
+    </div>
+</body>
+<script>
+    -- lua script
+    local elements = dom:queryElementsByClass("container")[1].children
+    setInterval(5000, function()
+        for i, element in ipairs(elements) do
+            element.text = "Hello World "..i.."!"
+        end
+    end)
+</script>
